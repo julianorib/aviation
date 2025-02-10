@@ -15,6 +15,8 @@ Em desenvolvimento.
 
 ## Variáveis:
 
+.env
+
 ```
 MYSQL_HOST=localhost
 MYSQL_USER=root
@@ -23,4 +25,16 @@ MYSQL_DB=aviation_db
 AWS_ACCESS_KEY_ID=your-access-key-id
 AWS_SECRET_ACCESS_KEY=your-secret-access-key
 AWS_BUCKET_NAME=your-bucket-name
+```
+
+## Build
+
+```
+docker build -t aviation .
+```
+
+## Execução:
+
+```
+docker run -d -p 5000:5000 -env-file .env aviation
 ```
