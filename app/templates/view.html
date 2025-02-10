@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar Aviões</title>
+</head>
+<body>
+    <h1>Aviões Cadastrados</h1>
+    {% for aviao in aviões %}
+        <div>
+            <img src="{{ aviao.foto_url }}" alt="Foto do Avião">
+            <p>Nome: {{ aviao.nome }}</p>
+            <p>Prefixo: {{ aviao.prefixo }}</p>
+            <a href="{{ url_for('excluir', id=aviao.id) }}">Excluir</a>
+        </div>
+    {% endfor %}
+</body>
+</html>

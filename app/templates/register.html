@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Avião</title>
+</head>
+<body>
+    <h1>Cadastrar Novo Avião</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="nome">Nome do Avião:</label>
+        <input type="text" name="nome" required><br>
+        
+        <label for="prefixo">Prefixo:</label>
+        <input type="text" name="prefixo" required><br>
+        
+        <label for="foto">Foto do Avião:</label>
+        <input type="file" name="foto" accept="image/*" required><br>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

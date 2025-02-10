@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicação de Aviões</title>
+</head>
+<body>
+    <h1>Bem-vindo à aplicação de aviões!</h1>
+    {% if aviao %}
+        <img src="{{ aviao.foto_url }}" alt="Foto do Avião">
+        <p>Nome: {{ aviao.nome }}</p>
+        <p>Prefixo: {{ aviao.prefixo }}</p>
+    {% else %}
+        <p>Nenhum avião cadastrado.</p>
+    {% endif %}
+    <br>
+    <a href="{{ url_for('cadastrar') }}">Cadastrar Avião</a>
+    <a href="{{ url_for('visualizar') }}">Visualizar Aviões</a>
+</body>
+</html>
